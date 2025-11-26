@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <!-- HEADER / NAV (style mil.be) -->
+<!-- HEADER / NAV (style mil.be) -->
   <header class="sticky top-0 z-[9000] bg-white border-b border-black/10">
 
     <!-- Utility bar (langue / accès rapides) -->
@@ -91,8 +91,8 @@
           <a href="#" class="hover:underline">Communiqués</a>
         </div>
         <div class="flex items-center gap-4">
-          <a href="#actualites" class="hover:underline">Communiqués</a>
-          <a href="#contact" class="hover:underline">Presse</a>
+          <a href="https://www.acr-rdc.com/" class="hover:underline">ACR</a>
+          <a href="https://defense.gouv.cd/" class="hover:underline">Defense-Nationale</a>
           <a href="#contact" class="hover:underline">Recrutement</a>
         </div>
       </div>
@@ -116,13 +116,13 @@
         <!-- Desktop menu with mega panels -->
         <div class="hidden lg:flex items-center gap-8">
 
-          <!-- Group -->
-          <div class="group">
-            <a href="#accueil" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition">
+          <!-- Group ACCUEIL -->
+          <div class="group h-full flex items-center">
+            <a href="#accueil" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
               Accueil
             </a>
-            <!-- Mega -->
-            <div class="absolute left-0 right-0 top-[104px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
+            <!-- Mega : Changement ici top-[80px] et pt-[24px] pour créer le pont invisible -->
+            <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
               <div class="bg-white border-t border-b border-black/10 shadow-soft">
                 <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-4 gap-6">
                   <div>
@@ -154,11 +154,12 @@
             </div>
           </div>
 
-          <div class="group">
-            <a href="#actualites" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition">
+          <!-- Group ACTUALITES -->
+          <div class="group h-full flex items-center">
+            <a href="#actualites" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
               Actualités
             </a>
-            <div class="absolute left-0 right-0 top-[104px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
+            <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
               <div class="bg-white border-t border-b border-black/10 shadow-soft">
                 <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-4 gap-6">
                   <div>
@@ -188,11 +189,12 @@
             </div>
           </div>
 
-          <div class="group">
-            <a href="#projets" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition">
+          <!-- Group PROJETS -->
+          <div class="group h-full flex items-center">
+            <a href="#projets" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
               Projets
             </a>
-            <div class="absolute left-0 right-0 top-[104px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
+            <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
               <div class="bg-white border-t border-b border-black/10 shadow-soft">
                 <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-4 gap-6">
                   <div>
@@ -222,11 +224,12 @@
             </div>
           </div>
 
-          <div class="group">
-            <a href="#biographie" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition">
+          <!-- Group BIOGRAPHIE -->
+          <div class="group h-full flex items-center">
+            <a href="#biographie" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
               Biographie
             </a>
-            <div class="absolute left-0 right-0 top-[104px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
+            <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
               <div class="bg-white border-t border-b border-black/10 shadow-soft">
                 <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-4 gap-6">
                   <div>
@@ -256,11 +259,12 @@
             </div>
           </div>
 
-          <div class="group">
-            <a href="#contact" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition">
+          <!-- Group CONTACT -->
+          <div class="group h-full flex items-center">
+            <a href="#contact" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
               Contact
             </a>
-            <div class="absolute left-0 right-0 top-[104px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
+            <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
               <div class="bg-white border-t border-b border-black/10 shadow-soft">
                 <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-4 gap-6">
                   <div>
@@ -294,9 +298,18 @@
 
         <!-- Actions -->
         <div class="flex items-center gap-2">
-          <a href="#login"
-            class="hidden sm:inline-flex items-center gap-2 px-3 py-2 bg-rdcRed text-white text-xs font-bold uppercase tracking-wider hover:bg-rdcRed/90 transition">
-            👤 Login
+          <a class=" hidden lg:block cursor-pointer hover:text-brand-2" href="#login" title="Login" aria-label="Login" data-tracking="nav">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 16 17" class="size-6">
+              <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
+                <path d="M8 10.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8M2 14c1.21-2.092 3.41-3.5 6-3.5s4.79 1.408 6 3.5"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 .5h16v16H0z"></path>
+                </clipPath>
+              </defs>
+            </svg>
           </a>
 
           <!-- Burger -->
@@ -311,7 +324,7 @@
       </div>
 
       <!-- Mobile menu (sous-catégories visibles direct) -->
-      <div id="mobileMenu" class="lg:hidden overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out">
+      <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white border-b border-black/10 shadow-soft lg:hidden overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out">
         <div class="pb-4 pt-2 space-y-2 text-sm">
           <div class="bg-white border border-black/10 p-3">
             <a href="#accueil" class="font-bold uppercase tracking-wide block">Accueil</a>
@@ -354,15 +367,27 @@
             </div>
           </div>
 
-          <a href="#login"
-            class="sm:hidden inline-flex items-center justify-center gap-2 w-full px-3 py-2 bg-rdcRed text-white text-xs font-bold uppercase tracking-wider hover:bg-rdcRed/90 transition">
-            👤 Login
+          <a href="#login" class="lg:hidden inline-flex items-center justify-center gap-2 w-full px-3 py-2 bg-rdcGold text-dark text-xs font-bold uppercase tracking-wider hover:bg-rdcGold/60 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 16 17" class="size-6">
+              <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
+                <path d="M8 10.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8M2 14c1.21-2.092 3.41-3.5 6-3.5s4.79 1.408 6 3.5"></path>
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 .5h16v16H0z"></path>
+                </clipPath>
+              </defs>
+            </svg>
+
+            Login
           </a>
         </div>
       </div>
 
     </nav>
   </header>
+
 
 <!-- HERO (style mil.be avec YouTube background) -->
 <section
@@ -431,97 +456,172 @@
   </section>
 
   <!-- ACTUALITÉS -->
-  <section id="actualites" class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
-    <div class="flex items-end justify-between">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Actualités</h2>
-        <p class="mt-2 text-black/70">Communiqués, opérations, activités officielles.</p>
-      </div>
-      <a href="#" class="hidden md:inline-flex text-sm font-semibold text-rdcBlue hover:underline uppercase tracking-wide">
-        Toutes les actualités →
-      </a>
+<section id="actualites" class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
+
+  <div class="flex items-end justify-between">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Actualités</h2>
+      <p class="mt-2 text-black/70">
+        Hommages nationaux, réformes, actions sociales et accompagnement des anciens combattants.
+      </p>
     </div>
 
-    <div class="mt-6 grid lg:grid-cols-3 gap-5">
-      <article class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition">
-        <div class="h-40 bg-gradient-to-br from-rdcBlue/15 to-cream2"></div>
-        <div class="p-5">
-          <p class="text-xs uppercase tracking-widest text-black/60 font-semibold">Communiqué • 20 Nov 2025</p>
-          <h3 class="mt-2 font-bold text-lg">Renforcement de la préparation opérationnelle</h3>
-          <p class="mt-2 text-sm text-black/70">Formation avancée et modernisation des équipements.</p>
-        </div>
-      </article>
-
-      <article class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition">
-        <div class="h-40 bg-gradient-to-br from-rdcRed/15 to-cream2"></div>
-        <div class="p-5">
-          <p class="text-xs uppercase tracking-widest text-black/60 font-semibold">Discours • 18 Nov 2025</p>
-          <h3 class="mt-2 font-bold text-lg">Hommage aux vétérans de la nation</h3>
-          <p class="mt-2 text-sm text-black/70">Cérémonie nationale de reconnaissance.</p>
-        </div>
-      </article>
-
-      <article class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition">
-        <div class="h-40 bg-gradient-to-br from-rdcGold/25 to-cream2"></div>
-        <div class="p-5">
-          <p class="text-xs uppercase tracking-widest text-black/60 font-semibold">Opérations • 12 Nov 2025</p>
-          <h3 class="mt-2 font-bold text-lg">Appui aux populations en zone d’urgence</h3>
-          <p class="mt-2 text-sm text-black/70">Déploiement coordonné pour protection des civils.</p>
-        </div>
-      </article>
-    </div>
-
-    <a href="#" class="mt-6 md:hidden inline-flex text-sm font-semibold text-rdcBlue hover:underline uppercase tracking-wide">
+    <a href="#" class="hidden md:inline-flex text-sm font-semibold text-rdcBlue hover:underline uppercase tracking-wide">
       Toutes les actualités →
     </a>
-  </section>
+  </div>
 
-  <!-- MISSIONS -->
-  <section id="missions" class="bg-cream2 border-y border-black/10">
-    <div class="max-w-7xl mx-auto px-4 lg:px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Missions</h2>
-        <p class="mt-3 text-black/70 leading-relaxed">
-          Défendre l’intégrité du territoire, sécuriser les citoyens et soutenir les anciens combattants.
-        </p>
+  <div class="mt-6 grid lg:grid-cols-3 gap-5">
 
-        <div class="mt-6 space-y-3">
-          <div class="bg-white p-4 border border-black/10 flex gap-3">
-            <div class="w-10 h-10 bg-rdcBlue/10 flex items-center justify-center">🛡️</div>
-            <div>
-              <p class="font-semibold">Protection du territoire</p>
-              <p class="text-sm text-black/70">Surveillance et défense active.</p>
-            </div>
-          </div>
-          <div class="bg-white p-4 border border-black/10 flex gap-3">
-            <div class="w-10 h-10 bg-rdcRed/10 flex items-center justify-center">🤝</div>
-            <div>
-              <p class="font-semibold">Coopération sécuritaire</p>
-              <p class="text-sm text-black/70">Partenariats bilatéraux et régionaux.</p>
-            </div>
-          </div>
-          <div class="bg-white p-4 border border-black/10 flex gap-3">
-            <div class="w-10 h-10 bg-rdcGold/20 flex items-center justify-center">🏥</div>
-            <div>
-              <p class="font-semibold">Anciens combattants</p>
-              <p class="text-sm text-black/70">Réinsertion et droits sociaux.</p>
-            </div>
-          </div>
-        </div>
+    <!-- ARTICLE 1 -->
+    <article class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition">
+      <div class="relative h-40 w-full overflow-hidden">
+        <img src="assets/bcc_kin.jpg" alt="ancient combattant" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-rdcBlue/30 to-cream2/40"></div>
       </div>
+      <div class="p-5">
+        <p class="text-xs uppercase tracking-widest text-black/60 font-semibold">
+          Communiqué • 20 Nov 2025
+        </p>
+        <h3 class="mt-2 font-bold text-lg">
+          Lancement du Fonds National d’Appui aux Anciens Combattants
+        </h3>
+        <p class="mt-2 text-sm text-black/70">
+          Mise en place d’aides financières, de soins prioritaires et de dispositifs de soutien social pour les vétérans.
+        </p>
+      </div>
+    </article>
 
-      <div class="aspect-[4/3] bg-white shadow-soft border border-black/10 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,115,207,0.18),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(206,17,38,0.18),transparent_45%),radial-gradient(circle_at_60%_80%,rgba(252,209,22,0.25),transparent_50%)]"></div>
-        <div class="relative p-8 h-full flex flex-col justify-end">
-          <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Focus</p>
-          <h3 class="mt-2 text-xl font-bold">Modernisation et professionnalisation</h3>
-          <p class="mt-2 text-sm text-black/70">
-            Une défense agile, mieux équipée et centrée sur le peuple congolais.
-          </p>
+
+    <!-- ARTICLE 2 -->
+    <article class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition">
+      <div class="relative h-40 w-full overflow-hidden">
+        <img src="assets/ancien-combattant-1.JPG" alt="ancient combattant" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-rdcGold/30 to-cream2/40"></div>
+      </div>
+      <div class="p-5">
+        <p class="text-xs uppercase tracking-widest text-black/60 font-semibold">
+          Cérémonie • 18 Nov 2025
+        </p>
+        <h3 class="mt-2 font-bold text-lg">
+          Hommage national aux vétérans et blessés de guerre
+        </h3>
+        <p class="mt-2 text-sm text-black/70">
+          Cérémonie officielle dédiée à la reconnaissance des anciens combattants ayant servi la Nation.
+        </p>
+      </div>
+    </article>
+
+    <!-- ARTICLE 3 -->
+    <article class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition">
+      <div class="relative h-40 w-full overflow-hidden">
+        <img src="assets/ancien-combattant-3.JPG" alt="ancient combattant" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-rdcRed/30 to-cream2/40"></div>
+      </div>
+      <div class="p-5">
+        <p class="text-xs uppercase tracking-widest text-black/60 font-semibold">
+          Réforme • 12 Nov 2025
+        </p>
+        <h3 class="mt-2 font-bold text-lg">
+          Modernisation du système des pensions militaires
+        </h3>
+        <p class="mt-2 text-sm text-black/70">
+          Simplification des démarches, revalorisation des pensions et numérique au service des anciens combattants.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <a href="#" class="mt-6 md:hidden inline-flex text-sm font-semibold text-rdcBlue hover:underline uppercase tracking-wide">
+    Toutes les actualités →
+  </a>
+
+</section>
+
+
+<!-- MISSIONS -->
+<section id="missions" class="bg-cream2 border-y border-black/10">
+  <div class="max-w-7xl mx-auto px-4 lg:px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
+
+    <!-- Texte -->
+    <div>
+      <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Missions</h2>
+
+      <p class="mt-3 text-black/70 leading-relaxed">
+        Le Ministère Délégué supervise la modernisation de la Défense nationale et assure la
+        protection des droits des anciens combattants, en veillant à leur reconnaissance, leur
+        accompagnement social et leur réinsertion économique.  
+      </p>
+
+      <!-- Cartes -->
+      <div class="mt-6 space-y-3">
+
+        <!-- 1 — Reconnaissance nationale -->
+        <div class="bg-white p-4 border border-black/10 flex gap-3">
+          <div class="w-10 h-10 bg-rdcBlue/10 flex items-center justify-center text-xl">🎖️</div>
+          <div>
+            <p class="font-semibold">Reconnaissance & Mémoire</p>
+            <p class="text-sm text-black/70">
+              Valorisation du sacrifice des anciens combattants, cérémonies nationales,
+              préservation de la mémoire militaire congolaise.
+            </p>
+          </div>
         </div>
+
+        <!-- 2 — Droits & accompagnement -->
+        <div class="bg-white p-4 border border-black/10 flex gap-3">
+          <div class="w-10 h-10 bg-rdcRed/10 flex items-center justify-center text-xl">⚖️</div>
+          <div>
+            <p class="font-semibold">Droits sociaux & assistance</p>
+            <p class="text-sm text-black/70">
+              Accès aux pensions, soins, aides financières, soutien psychologique, accompagnement des blessés et des familles.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 — Réinsertion et emploi -->
+        <div class="bg-white p-4 border border-black/10 flex gap-3">
+          <div class="w-10 h-10 bg-rdcGold/20 flex items-center justify-center text-xl">🏛️</div>
+          <div>
+            <p class="font-semibold">Réinsertion & opportunités économiques</p>
+            <p class="text-sm text-black/70">
+              Formation, reconversion professionnelle, partenariats avec les entreprises publiques et privées pour faciliter l’intégration.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </section>
+
+    <!-- Encadré visuel -->
+<div class="aspect-[4/3] bg-white shadow-soft border border-black/10 relative overflow-hidden">
+
+  <!-- Image -->
+  <img src="assets/ancien-combattant-2.jpg" 
+       alt="soldat vétérans"
+       class="absolute inset-0 w-full h-full object-cover object-center">
+
+  <!-- Dégradé visible AU-DESSUS (avec mêmes intensités que ton design global) -->
+  <div class="absolute inset-0 pointer-events-none
+      bg-[radial-gradient(circle_at_20%_20%,rgba(0,115,207,0.18),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(206,17,38,0.18),transparent_45%),radial-gradient(circle_at_60%_80%,rgba(252,209,22,0.25),transparent_50%)]">
+  </div>
+
+  <!-- Bande blanche plus petite -->
+  <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 px-5 py-4 border-t border-black/10">
+    <p class="text-[10px] uppercase tracking-widest text-black/60 font-bold">Focus</p>
+    <h3 class="mt-1 text-lg font-bold">Soutien aux anciens combattants</h3>
+    <p class="mt-1 text-xs text-black/70">
+      Une politique dédiée à la reconnaissance et au soutien de ceux qui ont servi.
+    </p>
+  </div>
+
+</div>
+
+
+  </div>
+</section>
+
 
   <!-- PROJETS -->
   <section id="projets" class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
@@ -670,54 +770,128 @@
     </div>
   </section>
 
-  <!-- FOOTER (carré, sérieux) -->
-  <footer class="bg-white border-t border-black/10">
-    <div class="max-w-7xl mx-auto px-4 lg:px-6 py-10 grid md:grid-cols-4 gap-8 text-sm">
-      <div>
-        <div class="flex items-center gap-2">
-          <div class="w-9 h-9 bg-rdcBlue text-white flex items-center justify-center font-extrabold">MD</div>
-          <p class="font-semibold uppercase tracking-wide">Ministère Délégué</p>
+<!-- FOOTER -->
+<footer class="bg-white border-t border-black/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14 grid gap-10 lg:grid-cols-4 text-sm">
+
+    <!-- LOGO -->
+    <div>
+      <a href="#accueil" class="flex items-center gap-3">
+        <div class="w-16 h-16 flex items-center justify-center">
+          <img src="assets/logof+.png" alt="">
         </div>
-        <p class="mt-3 text-black/70">
-          Défense Nationale & Anciens Combattants — RDC.
-        </p>
-      </div>
+        <div class="leading-tight">
+          <p class="text-base font-bold uppercase tracking-wide">
+            Ministre Délégué
+          </p>
+          <p class="text-xs text-black/70 uppercase tracking-wide">
+            Défense & Anciens Combattants
+          </p>
+        </div>
+      </a>
 
-      <div>
-        <p class="font-semibold uppercase tracking-wide">Liens rapides</p>
-        <ul class="mt-3 space-y-2 text-black/70">
-          <li><a href="#actualites" class="hover:underline">Actualités</a></li>
-          <li><a href="#missions" class="hover:underline">Missions</a></li>
-          <li><a href="#projets" class="hover:underline">Projets</a></li>
-          <li><a href="#agenda" class="hover:underline">Agenda</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="font-semibold uppercase tracking-wide">Contact</p>
-        <ul class="mt-3 space-y-2 text-black/70">
-          <li>📍 Kinshasa, RDC</li>
-          <li>☎️ +243 000 000 000</li>
-          <li>✉️ contact@defense.gouv.cd</li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="font-semibold uppercase tracking-wide">Légal</p>
-        <ul class="mt-3 space-y-2 text-black/70">
-          <li><a href="#" class="hover:underline">Mentions légales</a></li>
-          <li><a href="#" class="hover:underline">Confidentialité</a></li>
-          <li><a href="#" class="hover:underline">Cookies</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="border-t border-black/10 py-4">
-      <p class="text-center text-xs text-black/60 uppercase tracking-wide">
-        © <span id="year"></span> Ministère Délégué à la Défense Nationale — Tous droits réservés.
+      <p class="mt-5 text-[0.9rem] leading-relaxed text-black/70">
+        Ministère Délégué à la Défense Nationale de la République
+        Démocratique du Congo.
       </p>
     </div>
-  </footer>
+
+    <!-- ZONE DROITE (mobile: grid ; desktop: 3 colonnes alignées) -->
+    <div class="lg:col-span-3">
+
+      <!-- MOBILE GRID : liens rapides + contact -->
+      <div class="grid grid-cols-2 gap-10 lg:hidden">
+
+        <!-- LIENS RAPIDES -->
+        <div>
+          <p class="text-xl font-bold uppercase tracking-wide mb-4">
+            Liens rapides
+          </p>
+          <ul class="space-y-2 text-[0.9rem] text-black/70 leading-relaxed">
+            <li><a href="#actualites" class="hover:text-rdcBlue">Actualités</a></li>
+            <li><a href="#missions" class="hover:text-rdcBlue">Missions</a></li>
+            <li><a href="#projets" class="hover:text-rdcBlue">Projets</a></li>
+            <li><a href="#agenda" class="hover:text-rdcBlue">Agenda</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div>
+          <p class="text-xl font-bold uppercase tracking-wide mb-4">
+            Contact
+          </p>
+          <ul class="space-y-2 text-[0.9rem] text-black/70 leading-relaxed">
+            <li>📍 Kinshasa, RDC</li>
+            <li>☎️ +243 000 000 000</li>
+            <li>✉️ contact@defense.gouv.cd</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MOBILE : legal en ligne -->
+      <div class="lg:hidden mt-6">
+        <p class="text-xl font-bold uppercase tracking-wide mb-4">Légal</p>
+        <div class="flex justify-start gap-8 text-[0.9rem] text-black/70">
+          <a href="#" class="hover:text-rdcBlue">Mentions</a>
+          <a href="#" class="hover:text-rdcBlue">Confidentialité</a>
+          <a href="#" class="hover:text-rdcBlue">Cookies</a>
+        </div>
+      </div>
+
+      <!-- DESKTOP : 3 colonnes alignées -->
+      <div class="hidden lg:grid grid-cols-3 gap-16">
+
+        <!-- LIENS RAPIDES -->
+        <div>
+          <p class="text-xl font-bold uppercase tracking-wide mb-4">Liens rapides</p>
+          <ul class="space-y-2 text-[0.9rem] text-black/70 leading-relaxed">
+            <li><a href="#actualites" class="hover:text-rdcBlue">Actualités</a></li>
+            <li><a href="#missions" class="hover:text-rdcBlue">Missions</a></li>
+            <li><a href="#projets" class="hover:text-rdcBlue">Projets</a></li>
+            <li><a href="#agenda" class="hover:text-rdcBlue">Agenda</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div>
+          <p class="text-xl font-bold uppercase tracking-wide mb-4">Contact</p>
+          <ul class="space-y-2 text-[0.9rem] text-black/70 leading-relaxed">
+            <li>📍 Kinshasa, RDC</li>
+            <li>☎️ +243 000 000 000</li>
+            <li>✉️ contact@defense.gouv.cd</li>
+          </ul>
+        </div>
+
+        <!-- LEGAL -->
+        <div>
+          <p class="text-xl font-bold uppercase tracking-wide mb-4">Légal</p>
+          <ul class="space-y-2 text-[0.9rem] text-black/70 leading-relaxed">
+            <li><a href="#" class="hover:text-rdcBlue">Mentions légales</a></li>
+            <li><a href="#" class="hover:text-rdcBlue">Confidentialité</a></li>
+            <li><a href="#" class="hover:text-rdcBlue">Cookies</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-black/10 py-5">
+    <p class="text-center text-xs text-black/60 uppercase tracking-wide">
+      © <span id="year"></span> Ministère Délégué à la Défense Nationale — Tous droits réservés.
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
   <!-- Scroll-to-top -->
   <button id="scrollTopBtn"
