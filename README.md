@@ -1,59 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Projet Defense RDC
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ce document décrit les étapes pour cloner, installer et lancer le projet Defense RDC en utilisant l'environnement de développement Docker fourni par Laravel Sail.
 
-## About Laravel
+## Prérequis
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votre machine :
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Git
+- Docker & Docker Compose
+- Composer
+- Node.js & npm
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Installation et Lancement
 
-## Learning Laravel
+Suivez ces étapes pour mettre en place et démarrer le projet.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**1. Clonage du projet**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Clonez le dépôt Git du projet sur votre machine locale et naviguez dans le nouveau répertoire :
 
-## Laravel Sponsors
+```bash
+git clone https://github.com/votre-utilisateur/defense-rdc.git
+cd Defense-rdc
+```
+*(Remplacez l'URL par l'URL réelle du dépôt si différente.)*
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+**2. Configuration de l'environnement**
 
-### Premium Partners
+Copiez le fichier d'environnement d'exemple. La configuration par défaut est conçue pour fonctionner avec Laravel Sail.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```bash
+cp .env.example .env
+```
 
-## Contributing
+**3. Installation des dépendances PHP**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Utilisez une image Docker temporaire de Composer pour installer les dépendances PHP sans avoir besoin de PHP ou Composer sur votre machine locale. Cela garantit que les dépendances correspondent à l'environnement du conteneur.
 
-## Code of Conduct
+```bash
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd)":/var/www/html \
+    -w /var/www/html \
+    laravelsail/php83-composer:latest \
+    composer install --ignore-platform-reqs
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**4. Démarrage des conteneurs Docker**
 
-## Security Vulnerabilities
+Lancez les conteneurs de l'application avec le script Sail. L'option `-d` démarre les conteneurs en arrière-plan (mode détaché).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+./vendor/bin/sail up -d
+```
 
-## License
+**5. Génération de la clé d'application**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Une fois les conteneurs lancés, générez la clé de sécurité unique pour l'application Laravel.
+
+```bash
+./vendor/bin/sail artisan key:generate
+```
+
+**6. Installation des dépendances JavaScript**
+
+Installez les dépendances front-end définies dans `package.json`.
+
+```bash
+./vendor/bin/sail npm install
+```
+
+**7. Exécution des migrations de la base de données**
+
+Créez les tables dans la base de données en exécutant les migrations Laravel.
+
+```bash
+./vendor/bin/sail artisan migrate
+```
+
+**8. Compilation des assets (pour le développement)**
+
+Lancez le serveur de développement Vite pour la compilation des assets CSS et JS à la volée.
+
+```bash
+./vendor/bin/sail npm run dev
+```
+
+---
+
+## Accès à l'application
+
+Une fois toutes les étapes terminées et les conteneurs en cours d'exécution, votre application devrait être accessible à l'adresse suivante :
+
+[**http://localhost**](http://localhost)
+
+## Gérer les conteneurs
+
+Pour arrêter les conteneurs Docker de l'application :
+
+```bash
+./vendor/bin/sail down
+```
