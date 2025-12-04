@@ -67,9 +67,9 @@
 </head>
 
 <body class="bg-cream text-ink antialiased">
-
+<!-- BARRE DE PROGRESSION DE CHARGEMENT -->
     <div id="progressBar" class="notscroll fixed top-0 left-0 h-1 bg-rdcGold z-[9999] w-0"></div>
-
+<!-- POPUP COOKIES -->
     <div id="cookiePopup" class="notscroll fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:w-[420px] z-[9998]">
         <div class="bg-white border border-black/10 shadow-soft p-4 md:p-5">
             <div class="flex items-start gap-3">
@@ -123,38 +123,81 @@
 
     </section>
 
+<!-- BIOGRAPHIE -->
 
+    <section id="biographie" class="notscroll">
+        <div class="max-w-7xl mx-auto px-4 lg:px-6 pt-16 grid lg:grid-cols-2 gap-8 items-center">
+            <div class="aspect-square bg-white border border-black/10 shadow-soft relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,115,207,0.15),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(206,17,38,0.12),transparent_45%)]">
+                </div>
+                <img src="assets/NTAMBWE_MPOSHI_CHARMANT_ELIEZER.jpg" alt="Éliézer Ntambwe">
+                <div class="absolute bottom-0 left-0 right-0 bg-white/90 p-4 border-t border-black/10">
+                    <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Portrait officiel</p>
+                    <p class="font-semibold">Éliézer Ntambwe</p>
+                    <p class="text-sm text-black/70">Ministre Délégué à la Défense Nationale</p>
+                </div>
+            </div>
 
-    <section id="biographie" class="notscroll  max-w-7xl mx-auto px-4 lg:px-6 py-16 grid lg:grid-cols-2 gap-8 items-center">
-        <div class="aspect-square bg-white border border-black/10 shadow-soft relative overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,115,207,0.15),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(206,17,38,0.12),transparent_45%)]">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Ministre Délégué à la Défense Nationale
+                </h2>
+                <p class="mt-3 text-black/70 leading-relaxed">
+                    Parcours public, engagements nationaux et vision stratégique au service de la sécurité
+                    et des anciens combattants.
+                </p>
+                <ul class="mt-4 space-y-2 text-sm text-black/70">
+                    <li>• Expérience gouvernementale et réformes sectorielles</li>
+                    <li>• Programmes de modernisation et d’éthique militaire</li>
+                    <li>• Coopération régionale pour la stabilisation</li>
+                </ul>
+                <a href="#" class="mt-6 inline-flex text-sm font-semibold text-rdcBlue hover:underline uppercase tracking-wide">
+                    Lire la biographie complète →
+                </a>
             </div>
-            <img src="assets/NTAMBWE_MPOSHI_CHARMANT_ELIEZER.jpg" alt="Éliézer Ntambwe">
-            <div class="absolute bottom-0 left-0 right-0 bg-white/90 p-4 border-t border-black/10">
-                <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Portrait officiel</p>
-                <p class="font-semibold">Éliézer Ntambwe</p>
-                <p class="text-sm text-black/70">Ministre Délégué à la Défense Nationale</p>
-            </div>
+
         </div>
 
-        <div>
-            <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Ministre Délégué à la Défense Nationale
-            </h2>
-            <p class="mt-3 text-black/70 leading-relaxed">
-                Parcours public, engagements nationaux et vision stratégique au service de la sécurité
-                et des anciens combattants.
-            </p>
-            <ul class="mt-4 space-y-2 text-sm text-black/70">
-                <li>• Expérience gouvernementale et réformes sectorielles</li>
-                <li>• Programmes de modernisation et d’éthique militaire</li>
-                <li>• Coopération régionale pour la stabilisation</li>
-            </ul>
-            <a href="#" class="mt-6 inline-flex text-sm font-semibold text-rdcBlue hover:underline uppercase tracking-wide">
-                Lire la biographie complète →
-            </a>
-        </div>
+        <!-- AUTRES MEMBRES DU CABINET -->
+        <div id="cabinet" class="max-w-7xl mx-auto px-4 lg:px-6 py-16 grid lg:grid-cols-3 gap-8">
+
+            <!-- BLOC 1 -->
+            <div class="aspect-square bg-white border border-black/10 shadow-soft relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,115,207,0.15),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(206,17,38,0.12),transparent_45%)]"></div>
+                <img src="assets/MINISTRE_1.jpg" alt="Nom Ministre 1" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-white/90 p-4 border-t border-black/10">
+                    <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Portrait officiel</p>
+                    <p class="font-semibold">Nom Ministre 1</p>
+                    <p class="text-sm text-black/70">Titre du Ministre</p>
+                </div>
+            </div>
+
+            <!-- BLOC 2 -->
+            <div class="aspect-square bg-white border border-black/10 shadow-soft relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,115,207,0.15),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(206,17,38,0.12),transparent_45%)]"></div>
+                <img src="assets/MINISTRE_2.jpg" alt="Nom Ministre 2" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-white/90 p-4 border-t border-black/10">
+                    <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Portrait officiel</p>
+                    <p class="font-semibold">Nom Ministre 2</p>
+                    <p class="text-sm text-black/70">Titre du Ministre</p>
+                </div>
+            </div>
+
+            <!-- BLOC 3 -->
+            <div class="aspect-square bg-white border border-black/10 shadow-soft relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,115,207,0.15),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(206,17,38,0.12),transparent_45%)]"></div>
+                <img src="assets/MINISTRE_3.jpg" alt="Nom Ministre 3" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 right-0 bg-white/90 p-4 border-t border-black/10">
+                    <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Portrait officiel</p>
+                    <p class="font-semibold">Nom Ministre 3</p>
+                    <p class="text-sm text-black/70">Titre du Ministre</p>
+                </div>
+            </div>
+    </div>
+
+
     </section>
 
+<!-- ACTUALITÉS -->
     <section id="actualites" class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
 
         <div class="flex items-end justify-between">
@@ -236,7 +279,9 @@
 
     </section>
 
-    <section id="annonces" class="bg-cream2 border-y border-black/10">
+
+    <!-- ANNONCES OFFICIELLES -->
+    <!--<section id="annonces" class="bg-cream2 border-y border-black/10">
         <div class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
             <div class="max-w-4xl">
                 <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Annonces Officielles</h2>
@@ -318,9 +363,9 @@
 
             </div>
         </div>
-    </section>
-
-    <section id="decisions" class="border-b border-black/10">
+    </section>-->
+    <!-- DÉCISIONS & NOTES -->
+    <!--<section id="decisions" class="border-b border-black/10">
         <div class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
             <div class="max-w-4xl mb-8">
                 <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Décisions & Notes</h2>
@@ -424,11 +469,12 @@
 
             </div>
         </div>
-    </section>
+    </section>-->
 
+<!-- MISSIONS -->
 
-    <section id="missions" class="bg-cream2 border-y border-black/10">
-        <div class="max-w-7xl mx-auto px-4 lg:px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
+    <section id="missions" class="bg-[#FAF2CB] border-y border-black/10">
+        <div class="max-w-7xl mx-auto px-4 lg:px-6 pt-16 grid lg:grid-cols-2 gap-10 items-center">
 
             <div>
                 <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Missions</h2>
@@ -441,33 +487,33 @@
 
                 <div class="mt-6 space-y-3">
 
-                    <div class="bg-white p-4 border border-black/10 flex gap-3">
+                    <div class="bg-[#F1875B] text-white p-4 border border-black/10 flex gap-3">
                         <div class="w-10 h-10 bg-rdcBlue/10 flex items-center justify-center text-xl">🎖️</div>
                         <div>
                             <p class="font-semibold">Reconnaissance & Mémoire</p>
-                            <p class="text-sm text-black/70">
+                            <p class="text-sm text-white/70">
                                 Valorisation du sacrifice des anciens combattants, cérémonies nationales,
                                 préservation de la mémoire militaire congolaise.
                             </p>
                         </div>
                     </div>
-
-                    <div class="bg-white p-4 border border-black/10 flex gap-3">
+                
+                    <div class="bg-[#F1875B]  text-white p-4 border border-black/10 flex gap-3">
                         <div class="w-10 h-10 bg-rdcRed/10 flex items-center justify-center text-xl">⚖️</div>
                         <div>
                             <p class="font-semibold">Droits sociaux & assistance</p>
-                            <p class="text-sm text-black/70">
+                            <p class="text-sm text-white/70">
                                 Accès aux pensions, soins, aides financières, soutien psychologique, accompagnement des blessés et des
                                 familles.
                             </p>
                         </div>
                     </div>
 
-                    <div class="bg-white p-4 border border-black/10 flex gap-3">
+                    <div class="bg-[#F1875B] text-white p-4 h-full border border-black/10 flex gap-3">
                         <div class="w-10 h-10 bg-rdcGold/20 flex items-center justify-center text-xl">🏛️</div>
                         <div>
                             <p class="font-semibold">Réinsertion & opportunités économiques</p>
-                            <p class="text-sm text-black/70">
+                            <p class="text-sm text-white/70">
                                 Formation, reconversion professionnelle, partenariats avec les entreprises publiques et privées pour
                                 faciliter l’intégration.
                             </p>
@@ -476,53 +522,53 @@
 
                 </div>
             </div>
-
-            <div class="aspect-[4/3] bg-white shadow-soft border border-black/10 relative overflow-hidden">
+            <div class="lg:flex lg:h-full">
+            <div class="aspect-[4/3] h-full bg-white shadow-soft border border-black/10 relative overflow-hidden">
 
                 <img src="assets/ancien-combattant-2.jpg" alt="soldat vétérans" class="absolute inset-0 w-full h-full object-cover object-center">
 
-                <div class="absolute inset-0 pointer-events-none
-      bg-[radial-gradient(circle_at_20%_20%,rgba(0,115,207,0.18),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(206,17,38,0.18),transparent_45%),radial-gradient(circle_at_60%_80%,rgba(252,209,22,0.25),transparent_50%)]">
+                <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,rgba(0,115,207,0.18),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(206,17,38,0.18),transparent_45%),radial-gradient(circle_at_60%_80%,rgba(252,209,22,0.25),transparent_50%)]">
                 </div>
 
-                <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 px-5 py-4 border-t border-black/10">
-                    <p class="text-[10px] uppercase tracking-widest text-black/60 font-bold">Focus</p>
+                <div class="absolute bottom-0 left-0 w-full bg-[#6DA0C3] text-white bg-opacity-95 px-5 py-4 border-t border-black/10">
+                    <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Focus</p>
                     <h3 class="mt-1 text-lg font-bold">Soutien aux anciens combattants</h3>
-                    <p class="mt-1 text-xs text-black/70">
+                    <p class="mt-1 text-xs text-white/70">
                         Une politique dédiée à la reconnaissance et au soutien de ceux qui ont servi.
                     </p>
                 </div>
-
             </div>
+            </div>
+        </div>
 
+    <!-- PROJETS -->
+        <div id="projets" class="max-w-7xl mx-auto px-4 pt-6 lg:px-6 pb-16">
+            <!--<h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Projets</h2>-->
+            <!--<p class="mt-2 text-black/70">Axes de modernisation et programmes pour les vétérans.</p>-->
 
+            <div class="mt-6 grid md:grid-cols-3 h-60 gap-4">
+                <div class="bg-[#6DA0C3] text-white p-6 border border-black/10 shadow-soft">
+                    <p class="text-xs uppercase tracking-widest text-white/60 font-bold">Modernisation</p>
+                    <h3 class="mt-2 font-bold">Équipements & infrastructures</h3>
+                    <p class="mt-2 text-sm text-white/70">Mise à niveau des capacités nationales.</p>
+                </div>
+                <div class="bg-[#6DA0C3] text-white p-6 border border-black/10 shadow-soft">
+                    <p class="text-xs uppercase tracking-widest text-white/60 font-bold">Formation</p>
+                    <h3 class="mt-2 font-bold">Doctrine & préparation</h3>
+                    <p class="mt-2 text-sm text-white/70">Professionnalisation des forces.</p>
+                </div>
+                <div class="bg-[#6DA0C3] text-white p-6 border border-black/10 shadow-soft">
+                    <p class="text-xs uppercase tracking-widest text-white/60 font-bold">Vétérans</p>
+                    <h3 class="mt-2 font-bold">Réinsertion & mémoire</h3>
+                    <p class="mt-2 text-sm text-white/70">Reconnaissance et appui social.</p>
+                </div>
+            </div>
         </div>
     </section>
 
 
-    <section id="projets" class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
-        <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Projets</h2>
-        <p class="mt-2 text-black/70">Axes de modernisation et programmes pour les vétérans.</p>
 
-        <div class="mt-6 grid md:grid-cols-3 gap-4">
-            <div class="bg-white p-6 border border-black/10 shadow-soft">
-                <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Modernisation</p>
-                <h3 class="mt-2 font-bold">Équipements & infrastructures</h3>
-                <p class="mt-2 text-sm text-black/70">Mise à niveau des capacités nationales.</p>
-            </div>
-            <div class="bg-white p-6 border border-black/10 shadow-soft">
-                <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Formation</p>
-                <h3 class="mt-2 font-bold">Doctrine & préparation</h3>
-                <p class="mt-2 text-sm text-black/70">Professionnalisation des forces.</p>
-            </div>
-            <div class="bg-white p-6 border border-black/10 shadow-soft">
-                <p class="text-xs uppercase tracking-widest text-black/60 font-bold">Vétérans</p>
-                <h3 class="mt-2 font-bold">Réinsertion & mémoire</h3>
-                <p class="mt-2 text-sm text-black/70">Reconnaissance et appui social.</p>
-            </div>
-        </div>
-    </section>
-
+<!-- AGENDA -->
     <section id="agenda" class="bg-cream2 border-y border-black/10">
         <div class="max-w-7xl mx-auto px-4 lg:px-6 py-16">
 
@@ -613,7 +659,7 @@
 
 
 
-
+<!-- CONTACT -->
 
     <section id="contact" class="max-w-7xl mx-auto px-4 lg:px-6 py-14">
         <div class="bg-ink text-white p-8 md:p-10 shadow-soft relative overflow-hidden border border-black/10">

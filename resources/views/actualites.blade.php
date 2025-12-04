@@ -82,7 +82,7 @@
             <h1 class="text-3xl md:text-5xl font-extrabold mb-6">Actualités & Publications</h1>
             <p class="text-white/70 max-w-2xl text-lg leading-relaxed">
                 L'ensemble de l'information officielle : communiqués, discours du Ministre, opérations de terrain et
-                actes administratifs.
+                actes administratifs. 
             </p>
         </div>
     </section>
