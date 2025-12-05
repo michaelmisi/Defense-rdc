@@ -153,7 +153,11 @@
                 <a href="#" class="mt-6 inline-flex text-sm font-semibold text-rdcBlue hover:underline uppercase tracking-wide">
                     Lire la biographie complète →
                 </a>
+
+                
+
             </div>
+            
 
         </div>
 
@@ -523,21 +527,21 @@
                 </div>
             </div>
             <div class="lg:flex lg:h-full">
-            <div class="aspect-[4/3] h-full bg-white shadow-soft border border-black/10 relative overflow-hidden">
-
-                <img src="assets/ancien-combattant-2.jpg" alt="soldat vétérans" class="absolute inset-0 w-full h-full object-cover object-center">
-
-                <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,rgba(0,115,207,0.18),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(206,17,38,0.18),transparent_45%),radial-gradient(circle_at_60%_80%,rgba(252,209,22,0.25),transparent_50%)]">
+                <div class="aspect-[4/3] h-full bg-white shadow-soft border border-black/10 relative overflow-hidden">
+                
+                    <img src="assets/ancien-combattant-2.jpg" alt="soldat vétérans" class="absolute inset-0 w-full h-full object-cover object-center">
+                
+                    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_20%,rgba(0,115,207,0.18),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(206,17,38,0.18),transparent_45%),radial-gradient(circle_at_60%_80%,rgba(252,209,22,0.25),transparent_50%)]">
+                    </div>
+                
+                    <div class="absolute bottom-0 left-0 w-full bg-[#6DA0C3] text-white bg-opacity-95 px-5 py-4 border-t border-black/10">
+                        <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Focus</p>
+                        <h3 class="mt-1 text-lg font-bold">Soutien aux anciens combattants</h3>
+                        <p class="mt-1 text-xs text-white/70">
+                            Une politique dédiée à la reconnaissance et au soutien de ceux qui ont servi.
+                        </p>
+                    </div>
                 </div>
-
-                <div class="absolute bottom-0 left-0 w-full bg-[#6DA0C3] text-white bg-opacity-95 px-5 py-4 border-t border-black/10">
-                    <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Focus</p>
-                    <h3 class="mt-1 text-lg font-bold">Soutien aux anciens combattants</h3>
-                    <p class="mt-1 text-xs text-white/70">
-                        Une politique dédiée à la reconnaissance et au soutien de ceux qui ont servi.
-                    </p>
-                </div>
-            </div>
             </div>
         </div>
 
@@ -546,7 +550,7 @@
             <!--<h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Projets</h2>-->
             <!--<p class="mt-2 text-black/70">Axes de modernisation et programmes pour les vétérans.</p>-->
 
-            <div class="mt-6 grid md:grid-cols-3 h-60 gap-4">
+            <div class="mt-6 grid md:grid-cols-3 md:h-60 gap-4">
                 <div class="bg-[#6DA0C3] text-white p-6 border border-black/10 shadow-soft">
                     <p class="text-xs uppercase tracking-widest text-white/60 font-bold">Modernisation</p>
                     <h3 class="mt-2 font-bold">Équipements & infrastructures</h3>
