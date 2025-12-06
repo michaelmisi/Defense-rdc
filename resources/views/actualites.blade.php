@@ -512,30 +512,7 @@
     </button>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Menu Mobile Logic
-        const burgerBtn = document.getElementById("burgerBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const burgerLines = burgerBtn.querySelectorAll(".burger-line");
-        let menuOpen = false;
-
-        function toggleMenu() {
-            menuOpen = !menuOpen;
-            if (menuOpen) {
-                burgerLines[0].style.transform = "translateY(8px) rotate(45deg)";
-                burgerLines[1].style.opacity = "0";
-                burgerLines[2].style.transform = "translateY(-8px) rotate(-45deg)";
-                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-            } else {
-                burgerLines[0].style.transform = "translateY(0) rotate(0)";
-                burgerLines[1].style.opacity = "1";
-                burgerLines[2].style.transform = "translateY(0) rotate(0)";
-                mobileMenu.style.maxHeight = "0px";
-            }
-        }
-
-        burgerBtn.addEventListener("click", toggleMenu);
 
         // Scroll Logic
         const progressBar = document.getElementById("progressBar");

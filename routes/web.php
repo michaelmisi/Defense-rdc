@@ -19,6 +19,14 @@ Route::get('/actualites', function () {
 })->name('actualites');
 
 // ------------------------
+// PAGE CONTACT (publique)
+// ------------------------
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+
+// ------------------------
 // PROFIL & LOGOUT DE BREEZE
 // ------------------------
 Route::middleware('auth')->group(function () {

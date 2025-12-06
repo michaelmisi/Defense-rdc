@@ -789,37 +789,7 @@
         });
 
 
-        // Burger anim + menu
-        const burgerBtn = document.getElementById("burgerBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const burgerLines = burgerBtn.querySelectorAll(".burger-line");
-        let menuOpen = false;
 
-        burgerBtn.addEventListener("click", () => {
-            menuOpen = !menuOpen;
-            if (menuOpen) {
-                burgerLines[0].style.transform = "translateY(8px) rotate(45deg)";
-                burgerLines[1].style.opacity = "0";
-                burgerLines[2].style.transform = "translateY(-8px) rotate(-45deg)";
-                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-            } else {
-                burgerLines[0].style.transform = "translateY(0) rotate(0)";
-                burgerLines[1].style.opacity = "1";
-                burgerLines[2].style.transform = "translateY(0) rotate(0)";
-                mobileMenu.style.maxHeight = "0px";
-            }
-        });
-
-        mobileMenu.querySelectorAll("a").forEach(a => {
-            a.addEventListener("click", () => {
-                if (!menuOpen) return;
-                menuOpen = false;
-                burgerLines[0].style.transform = "translateY(0) rotate(0)";
-                burgerLines[1].style.opacity = "1";
-                burgerLines[2].style.transform = "translateY(0) rotate(0)";
-                mobileMenu.style.maxHeight = "0px";
-            });
-        });
 
         // Progress bar + scrollTop btn
         const progressBar = document.getElementById("progressBar");

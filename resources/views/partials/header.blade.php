@@ -169,7 +169,7 @@
                     </div>
 
                     <div class="group h-full flex items-center">
-                        <a href="#contact" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
+                        <a href="{{ route('contact') }}" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
                             Contact
                         </a>
                         <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
@@ -230,7 +230,7 @@
             </div>
 
             {{-- MENU MOBILE --}}
-            <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white border-b border-black/10 shadow-soft lg:hidden overflow-hidden max-h-0 transition-[max-height] duration-500 ease-in-out">
+            <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white  border-b border-black/10 shadow-soft lg:hidden overflow-y-auto max-h-0 transition-[max-height] duration-500 ease-in-out">
                 <div class="pb-4 pt-2 space-y-2 text-sm">
                     <div class="bg-white border border-black/10 p-3">
                         <a href="#accueil" class="font-bold uppercase tracking-wide block">Accueil</a>
@@ -273,7 +273,7 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('login') }}" class="lg:hidden inline-flex items-center justify-center gap-2 w-full px-3 py-2 bg-rdcGold text-dark text-xs font-bold uppercase tracking-wider hover:bg-rdcGold/60 transition">
+                    <a href="{{ route('login') }}" class="lg:hidden inline-flex items-center justify-center gap-2 w-full  px-3 py-2 bg-rdcGold text-dark text-xs font-bold uppercase tracking-wider hover:bg-rdcGold/60 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 17" class="size-6">
                             <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
                                 <path d="M8 10.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8M2 14c1.21-2.092 3.41-3.5 6-3.5s4.79 1.408 6 3.5"></path>
@@ -292,3 +292,32 @@
 
         </nav>
     </header>
+    <script>
+        
+        // Menu Mobile Logic
+        const burgerBtn = document.getElementById("burgerBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const burgerLines = burgerBtn.querySelectorAll(".burger-line");
+        let menuOpen = false;
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+        
+            if (menuOpen) {
+                burgerLines[0].style.transform = "translateY(8px) rotate(45deg)";
+                burgerLines[1].style.opacity = "0";
+                burgerLines[2].style.transform = "translateY(-8px) rotate(-45deg)";
+            
+                mobileMenu.style.maxHeight = "85vh"; // ouverture avec limite contrôlée
+                mobileMenu.style.overflowY = "auto"; // scroll interne
+            } else {
+                burgerLines[0].style.transform = "translateY(0) rotate(0)";
+                burgerLines[1].style.opacity = "1";
+                burgerLines[2].style.transform = "translateY(0) rotate(0)";
+            
+                mobileMenu.style.maxHeight = "0";
+                mobileMenu.style.overflowY = "hidden";
+            }
+        }
+
+        burgerBtn.addEventListener("click", toggleMenu);
+    </script>
