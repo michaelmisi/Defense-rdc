@@ -19,6 +19,14 @@ Route::get('/actualites', function () {
 })->name('actualites');
 
 // ------------------------
+// PAGE CABINET (publique)
+// ------------------------
+Route::get('/cabinet', function () {
+    return view('cabinet');
+})->name('cabinet');
+
+
+// ------------------------
 // PAGE CONTACT (publique)
 // ------------------------
 Route::get('/contact', function () {

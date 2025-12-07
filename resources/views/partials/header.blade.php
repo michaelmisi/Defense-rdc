@@ -135,7 +135,7 @@
                     </div>
 
                     <div class="group h-full flex items-center">
-                        <a href="#biographie" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
+                        <a href="{{ route('cabinet') }}" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
                             Cabinet
                         </a>
                         <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
@@ -233,7 +233,7 @@
             <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white  border-b border-black/10 shadow-soft lg:hidden overflow-y-auto max-h-0 transition-[max-height] duration-500 ease-in-out">
                 <div class="pb-4 pt-2 space-y-2 text-sm">
                     <div class="bg-white border border-black/10 p-3">
-                        <a href="#accueil" class="font-bold uppercase tracking-wide block">Accueil</a>
+                        <a href="{{ '/' }}" class="font-bold uppercase tracking-wide block">Accueil</a>
                         <div class="mt-2 text-black/70 grid gap-1 pl-2">
                             <a href="#accueil">• Priorités nationales</a>
                             <a href="#ministere">• Organisation</a>
@@ -241,7 +241,7 @@
                         </div>
                     </div>
                     <div class="bg-white border border-black/10 p-3">
-                        <a href="#actualites" class="font-bold uppercase tracking-wide block">Actualités</a>
+                        <a href="{{ route('actualites') }}" class="font-bold uppercase tracking-wide block">Actualités</a>
                         <div class="mt-2 text-black/70 grid gap-1 pl-2">
                             <a href="#annonces">• Annonces officielles</a>
                             <a href="#actualites">• Communiqués</a>
@@ -257,7 +257,7 @@
                         </div>
                     </div>
                     <div class="bg-white border border-black/10 p-3">
-                        <a href="#biographie" class="font-bold uppercase tracking-wide block">Biographie</a>
+                        <a href="{{ route('cabinet') }}" class="font-bold uppercase tracking-wide block">Cabinet</a>
                         <div class="mt-2 text-black/70 grid gap-1 pl-2">
                             <a href="#biographie">• Parcours</a>
                             <a href="#biographie">• Cabinet</a>
@@ -265,7 +265,7 @@
                         </div>
                     </div>
                     <div class="bg-white border border-black/10 p-3">
-                        <a href="#contact" class="font-bold uppercase tracking-wide block">Contact</a>
+                        <a href="{{ route('contact') }}" class="font-bold uppercase tracking-wide block">Contact</a>
                         <div class="mt-2 text-black/70 grid gap-1 pl-2">
                             <a href="#contact">• Coordonnées</a>
                             <a href="#contact">• Presse</a>

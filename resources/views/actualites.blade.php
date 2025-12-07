@@ -73,7 +73,7 @@
     @include('partials.header')
 
     <!-- HERO SECTION -->
-    <section class="bg-ink text-white py-12 md:py-20 relative overflow-hidden">
+    <section class="bg-ink text-white py-12 md:py-20 relative overflow-hidden min-h-[340px]">
         <div class="absolute inset-0 bg-rdcBlue/10"></div>
         <div class="absolute -right-20 -top-20 w-96 h-96 bg-rdcBlue/20 rounded-full blur-3xl"></div>
 
@@ -88,7 +88,7 @@
     </section>
 
     <!-- BARRE DE FILTRES ETENDUE -->
-    <section class="sticky top-[64px] z-40 bg-cream/95 backdrop-blur border-b border-black/5 shadow-sm">
+    <section class="sticky top-[100px] z-40 bg-cream backdrop-blur border-b border-black/5 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 lg:px-6 py-4 overflow-x-auto no-scrollbar">
             <div class="flex items-center gap-3 min-w-max">
                 <button onclick="filterContent('all')" id="btn-all"
