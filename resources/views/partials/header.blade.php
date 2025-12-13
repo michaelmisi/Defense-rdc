@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="group h-full flex items-center">
-                        <a href="#projets" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
+                        <a href="{{ route('projets') }}" class="nav-link uppercase text-sm font-semibold tracking-wider hover:text-rdcBlue transition py-4">
                             Projets
                         </a>
                         <div class="absolute left-0 right-0 top-[80px] pt-[24px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 ease-out z-50">
@@ -249,7 +249,7 @@
                         </div>
                     </div>
                     <div class="bg-white border border-black/10 p-3">
-                        <a href="#projets" class="font-bold uppercase tracking-wide block">Projets</a>
+                        <a href="{{ route('projets') }}" class="font-bold uppercase tracking-wide block">Projets</a>
                         <div class="mt-2 text-black/70 grid gap-1 pl-2">
                             <a href="#projets">• Modernisation</a>
                             <a href="#projets">• Vétérans</a>

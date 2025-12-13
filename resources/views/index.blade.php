@@ -691,22 +691,24 @@
 
 <!-- CONTACT -->
 
-    <section id="contact" class="max-w-7xl bg-cream mx-auto px-4 lg:px-6 pb-16">
-        <div class="bg-ink text-white p-8 md:p-10 shadow-soft relative overflow-hidden border border-black/10">
-            <div class="absolute -right-24 -top-24 w-72 h-72 bg-rdcBlue/30 blur-2xl"></div>
-            <div class="absolute -left-24 -bottom-24 w-72 h-72 bg-rdcRed/30 blur-2xl"></div>
+    <section id="contact" class="bg-cream2">
+        <div class="max-w-7xl mx-auto px-4 lg:px-6 pb-16">
+            <div class="bg-ink text-white p-8 md:p-10 shadow-soft relative overflow-hidden border border-black/10">
+                <div class="absolute -right-24 -top-24 w-72 h-72 bg-rdcBlue/30 blur-2xl"></div>
+                <div class="absolute -left-24 -bottom-24 w-72 h-72 bg-rdcRed/30 blur-2xl"></div>
 
-            <div class="relative grid md:grid-cols-3 gap-6 items-center">
-                <div class="md:col-span-2">
-                    <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Contact</h2>
-                    <p class="mt-2 text-white/80">
-                        Demandes institutionnelles, presse et programmes pour vétérans.
-                    </p>
-                </div>
-                <div class="flex md:justify-end">
-                    <a href="mailto:contact@defense.gouv.cd" class="inline-flex items-center justify-center px-5 py-3 bg-rdcGold text-ink font-semibold hover:bg-rdcGold/90 transition">
-                        Écrire au Ministère
-                    </a>
+                <div class="relative grid md:grid-cols-3 gap-6 items-center">
+                    <div class="md:col-span-2">
+                        <h2 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">Contact</h2>
+                        <p class="mt-2 text-white/80">
+                            Demandes institutionnelles, presse et programmes pour vétérans.
+                        </p>
+                    </div>
+                    <div class="flex md:justify-end">
+                        <a href="mailto:contact@defense.gouv.cd" class="inline-flex items-center justify-center px-5 py-3 bg-rdcGold text-ink font-semibold hover:bg-rdcGold/90 transition">
+                            Écrire au Ministère
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

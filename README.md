@@ -93,7 +93,7 @@ Lancez le serveur de développement Vite pour la compilation des assets CSS et J
 Une fois toutes les étapes terminées et les conteneurs en cours d'exécution, votre application devrait être accessible à l'adresse suivante :
 
 [**http://localhost**](http://localhost)
-
+ 
 ## Gérer les conteneurs
 
 Pour arrêter les conteneurs Docker de l'application :

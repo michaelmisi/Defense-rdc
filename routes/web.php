@@ -19,6 +19,13 @@ Route::get('/actualites', function () {
 })->name('actualites');
 
 // ------------------------
+// PAGE PROJETS (publique)
+// ------------------------
+Route::get('/projets', function () {
+    return view('projets');
+})->name('projets');
+
+// ------------------------
 // PAGE CABINET (publique)
 // ------------------------
 Route::get('/cabinet', function () {
