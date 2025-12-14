@@ -100,7 +100,40 @@
         </p>
     </div>
 </footer>
+
+
+    <button id="scrollTopBtn" class="fixed bottom-6 right-6 z-[9997] opacity-0 translate-y-3 pointer-events-none
+           bg-rdcBlue text-white w-12 h-12 shadow-soft
+           flex items-center justify-center text-xl transition duration-300 hover:bg-rdcBlue/90" aria-label="Retour en haut">
+        ↑
+    </button>
 <script>
     // date automatique année copyright
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    
+
+
+
+
+        // Scroll Logic BTN + Progress Bar
+        const progressBar = document.getElementById("progressBar");
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        function onScroll() {
+            const scrollY = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+            progressBar.style.width = progress + "%";
+
+            if (scrollY > 300) {
+                scrollTopBtn.classList.remove("opacity-0", "translate-y-3", "pointer-events-none");
+                scrollTopBtn.classList.add("opacity-100", "translate-y-0");
+            } else {
+                scrollTopBtn.classList.add("opacity-0", "translate-y-3", "pointer-events-none");
+                scrollTopBtn.classList.remove("opacity-100", "translate-y-0");
+            }
+        }
+        window.addEventListener("scroll", onScroll);
+        scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 </script>
