@@ -187,118 +187,60 @@
             </div>
 
             <!-- Article “le plus récent” mis en avant (style priorité 2026) -->
-            <article class="bg-white border border-black/10 shadow-soft overflow-hidden mb-10">
-                <div class="grid lg:grid-cols-12">
-                    <div class="lg:col-span-5 relative h-64 lg:h-full overflow-hidden">
-                        <img src="{{ asset('assets/bcc_kin.jpg') }}" alt="ancient combattant"
-                            class="w-full h-full object-cover object-center hover:scale-105 transition duration-500">
-                        <div
-                            class="absolute top-4 left-4 bg-rdcGold text-ink text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                            À la une • Dossier vétérans
-                        </div>
-                        <div class="absolute bottom-4 left-4 flex gap-2">
-                            <span class="bg-black/60 text-white text-[10px] px-2 py-1 uppercase tracking-widest">Droits</span>
-                            <span class="bg-black/60 text-white text-[10px] px-2 py-1 uppercase tracking-widest">Santé</span>
-                            <span class="bg-black/60 text-white text-[10px] px-2 py-1 uppercase tracking-widest">Réinsertion</span>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-7 p-6 md:p-8">
-                        <div class="flex items-start justify-between gap-4">
-                            <div>
-                                <p class="text-xs font-mono text-black/50 mb-2">Communiqué • 20 Nov 2025 • Réf:
-                                    MDDN/AC/1120</p>
-                                <h3 class="text-2xl font-extrabold leading-tight">
-                                    Lancement du Fonds National d’Appui aux Anciens Combattants
-                                </h3>
-                                <p class="mt-3 text-black/70 leading-relaxed line-clamp-6">
-                                    Mise en place d’aides financières, de soins prioritaires et de dispositifs de soutien
-                                    social pour les vétérans. Le fonds prévoit également des mécanismes d’orientation
-                                    vers la formation, l’emploi et la reconversion, avec un suivi des dossiers et une
-                                    procédure de recours.
-                                </p>
+            @if($actualites->count() > 0)
+                @php $featured = $actualites->first(); @endphp
+                <article class="bg-white border border-black/10 shadow-soft overflow-hidden mb-10">
+                    <div class="grid lg:grid-cols-12">
+                        <div class="lg:col-span-5 relative h-64 lg:h-full overflow-hidden">
+                            <img src="{{ asset('storage/' . $featured->image) }}" alt="{{ $featured->title }}"
+                                class="w-full h-full object-cover object-center hover:scale-105 transition duration-500">
+                            <div
+                                class="absolute top-4 left-4 bg-rdcGold text-ink text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
+                                À la une • {{ $featured->category }}
                             </div>
+                        </div>
+
+                        <div class="lg:col-span-7 p-6 md:p-8">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <p class="text-xs font-mono text-black/50 mb-2">Communiqué • {{ $featured->published_at->format('d M Y') }}</p>
+                                    <h3 class="text-2xl font-extrabold leading-tight">
+                                        {{ $featured->title }}
+                                    </h3>
+                                    <p class="mt-3 text-black/70 leading-relaxed line-clamp-6">
+                                        {{ Str::limit(strip_tags($featured->content), 300) }}
+                                    </p>
+                                </div>
 
                                 <!-- Indicateurs “backend” -->
-                            <div class="shrink-0 text-right">
-                                <p class="text-[10px] font-bold uppercase tracking-widest text-black/50">Indicateurs</p>
-                                <div class="mt-2 space-y-2">
-                                    <div class="bg-cream2 border border-black/10 px-3 py-2">
-                                        <p class="text-[10px] text-black/50 uppercase tracking-widest">Lectures</p>
-                                        <p class="font-mono text-sm font-bold text-ink">12 438</p>
-                                    </div>
-                                    <div class="bg-cream2 border border-black/10 px-3 py-2">
-                                        <p class="text-[10px] text-black/50 uppercase tracking-widest">Partages</p>
-                                        <p class="font-mono text-sm font-bold text-ink">684</p>
+                                <div class="shrink-0 text-right">
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-black/50">Indicateurs</p>
+                                    <div class="mt-2 space-y-2">
+                                        <div class="bg-cream2 border border-black/10 px-3 py-2">
+                                            <p class="text-[10px] text-black/50 uppercase tracking-widest">Lectures</p>
+                                            <p class="font-mono text-sm font-bold text-ink">{{ $featured->views }}</p>
+                                        </div>
+                                        <div class="bg-cream2 border border-black/10 px-3 py-2">
+                                            <p class="text-[10px] text-black/50 uppercase tracking-widest">Partages</p>
+                                            <p class="font-mono text-sm font-bold text-ink">{{ $featured->shares }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Bandeau “dossier complet” -->
-                        <div class="mt-6 grid sm:grid-cols-3 gap-4">
-                            <div class="border-l-4 border-rdcBlue pl-4">
-                                <p class="text-xs font-bold uppercase tracking-widest text-black/50">Objectif</p>
-                                <p class="text-sm text-black/70">Soutien durable & ciblé des vétérans.</p>
-                            </div>
-                            <div class="border-l-4 border-black/10 pl-4">
-                                <p class="text-xs font-bold uppercase tracking-widest text-black/50">Rubriques</p>
-                                <p class="text-sm text-black/70">Éligibilité • Procédure • Recours</p>
-                            </div>
-                            <div class="border-l-4 border-black/10 pl-4">
-                                <p class="text-xs font-bold uppercase tracking-widest text-black/50">Documents</p>
-                                <p class="text-sm text-black/70">Communiqué • Formulaire • Annexes</p>
+                            <div class="mt-6 flex flex-wrap items-center gap-3">
+                                <a href="#"
+                                    class="bg-rdcBlue text-white px-5 py-2 text-sm font-bold uppercase tracking-wide hover:bg-rdcBlue/90 transition">
+                                    Lire le dossier complet
+                                </a>
+                                <a href="#" class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">
+                                    Voir plus →
+                                </a>
                             </div>
                         </div>
-
-                        <div class="mt-6 flex flex-wrap items-center gap-3">
-                            <button
-                                class="bg-rdcBlue text-white px-5 py-2 text-sm font-bold uppercase tracking-wide hover:bg-rdcBlue/90 transition">
-                                Lire le dossier complet
-                            </button>
-                            <button class="px-5 py-2 border border-black/10 text-sm font-semibold hover:bg-black/5 transition">
-                                Télécharger (PDF)
-                            </button>
-                            <a href="#" class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">
-                                Voir photos & annexes →
-                            </a>
-                        </div>
                     </div>
-                </div>
-            </article>
-
-            <!-- “Rubriques” comme si c’était un vrai dossier -->
-            <section class="bg-cream2 border border-black/10 shadow-soft p-6 mb-10">
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white border border-black/10 p-5">
-                        <p class="text-xs font-bold uppercase tracking-widest text-black/50">Rubrique</p>
-                        <h4 class="font-extrabold text-lg mt-2">Éligibilité & preuves</h4>
-                        <p class="text-sm text-black/70 mt-2">
-                            Qui peut bénéficier, pièces requises, validation et lutte anti-fraude.
-                        </p>
-                        <a class="inline-block mt-3 text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4"
-                            href="#">Ouvrir →</a>
-                    </div>
-                    <div class="bg-white border border-black/10 p-5">
-                        <p class="text-xs font-bold uppercase tracking-widest text-black/50">Rubrique</p>
-                        <h4 class="font-extrabold text-lg mt-2">Aides & prestations</h4>
-                        <p class="text-sm text-black/70 mt-2">
-                            Santé, appui financier, accompagnement social et orientation.
-                        </p>
-                        <a class="inline-block mt-3 text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4"
-                            href="#">Ouvrir →</a>
-                    </div>
-                    <div class="bg-white border border-black/10 p-5">
-                        <p class="text-xs font-bold uppercase tracking-widest text-black/50">Rubrique</p>
-                        <h4 class="font-extrabold text-lg mt-2">Procédure & recours</h4>
-                        <p class="text-sm text-black/70 mt-2">
-                            Dépôt du dossier, délais, suivi et mécanismes de recours.
-                        </p>
-                        <a class="inline-block mt-3 text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4"
-                            href="#">Ouvrir →</a>
-                    </div>
-                </div>
-            </section>
+                </article>
+            @endif
 
             <!-- Grille de news (4+) -->
             <h3 class="text-xl font-extrabold uppercase tracking-wide flex items-center gap-3 mb-6">
@@ -307,178 +249,34 @@
             </h3>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
+                @foreach($actualites->skip(1) as $actualite)
                 <article
                     class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition group">
                     <div class="relative h-48 w-full overflow-hidden">
-                        <img src="{{ asset('assets/ancien-combattant-1.JPG') }}" alt="ancient combattant"
+                        <img src="{{ asset('storage/' . $actualite->image) }}" alt="{{ $actualite->title }}"
                             class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
                         <div
                             class="absolute top-4 left-4 bg-rdcGold text-ink text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                            Cérémonie
+                            {{ $actualite->category }}
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-xs font-mono text-black/50 mb-2">18 Nov 2025</p>
+                        <p class="text-xs font-mono text-black/50 mb-2">{{ $actualite->published_at->format('d M Y') }}</p>
                         <h3 class="font-extrabold text-lg leading-tight mb-3 group-hover:text-rdcBlue transition">
-                            Hommage national aux vétérans et blessés de guerre
+                            {{ $actualite->title }}
                         </h3>
                         <p class="text-sm text-black/70 line-clamp-3">
-                            Cérémonie officielle dédiée à la reconnaissance des anciens combattants ayant servi la
-                            Nation.
+                            {{ Str::limit(strip_tags($actualite->content), 100) }}
                         </p>
 
                         <div class="mt-4 flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-black/50">Galerie</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-black/50">Article</span>
                             <a href="#"
                                 class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">Lire →</a>
                         </div>
                     </div>
                 </article>
-
-                <!-- Card 2 -->
-                <article
-                    class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition group">
-                    <div class="relative h-48 w-full overflow-hidden">
-                        <img src="{{ asset('assets/ancien-combattant-3.jpg') }}" alt="ancient combattant"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
-                        <div
-                            class="absolute top-4 left-4 bg-rdcRed text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                            Réforme
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs font-mono text-black/50 mb-2">12 Nov 2025</p>
-                        <h3 class="font-extrabold text-lg leading-tight mb-3 group-hover:text-rdcBlue transition">
-                            Modernisation du système des pensions militaires
-                        </h3>
-                        <p class="text-sm text-black/70 line-clamp-3">
-                            Simplification des démarches, revalorisation des pensions et numérique au service des
-                            anciens combattants.
-                        </p>
-
-                        <div class="mt-4 flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-black/50">Note</span>
-                            <a href="#"
-                                class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">Lire →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 3 -->
-                <article
-                    class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition group">
-                    <div class="relative h-48 w-full overflow-hidden">
-                        <img src="{{ asset('assets/ancien-combattant-2.jpg') }}" alt="ancient combattant"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
-                        <div
-                            class="absolute top-4 left-4 bg-rdcBlue text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                            Programme
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs font-mono text-black/50 mb-2">05 Nov 2025</p>
-                        <h3 class="font-extrabold text-lg leading-tight mb-3 group-hover:text-rdcBlue transition">
-                            Réinsertion : lancement des formations métiers (pilote)
-                        </h3>
-                        <p class="text-sm text-black/70 line-clamp-3">
-                            Métiers techniques, accompagnement à l’emploi et partenariat avec entreprises locales.
-                        </p>
-
-                        <div class="mt-4 flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-black/50">Réinsertion</span>
-                            <a href="#"
-                                class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">Lire →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 4 -->
-                <article
-                    class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition group">
-                    <div class="relative h-48 w-full overflow-hidden">
-                        <img src="{{ asset('assets/ancien-combattant-3.jpg') }}"
-                            alt="Entrepreneuriat"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
-                        <div
-                            class="absolute top-4 left-4 bg-ink text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                            Dossier
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs font-mono text-black/50 mb-2">29 Oct 2025</p>
-                        <h3 class="font-extrabold text-lg leading-tight mb-3 group-hover:text-rdcBlue transition">
-                            Appui à l’entrepreneuriat des vétérans : cadre et critères
-                        </h3>
-                        <p class="text-sm text-black/70 line-clamp-3">
-                            Critères d’éligibilité, mentoring, micro-financements et suivi post-accompagnement.
-                        </p>
-
-                        <div class="mt-4 flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-black/50">Cadre</span>
-                            <a href="#"
-                                class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">Lire →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 5 -->
-                <article
-                    class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition group">
-                    <div class="relative h-48 w-full overflow-hidden">
-                        <img src="{{ asset('assets/histo.jpeg') }}"
-                            alt="Santé"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
-                        <div
-                            class="absolute top-4 left-4 bg-rdcRed text-white text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                            Santé
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs font-mono text-black/50 mb-2">18 Oct 2025</p>
-                        <h3 class="font-extrabold text-lg leading-tight mb-3 group-hover:text-rdcBlue transition">
-                            Parcours santé prioritaire : prise en charge des blessés
-                        </h3>
-                        <p class="text-sm text-black/70 line-clamp-3">
-                            Orientation, priorisation et partenariats avec structures dédiées.
-                        </p>
-
-                        <div class="mt-4 flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-black/50">Soins</span>
-                            <a href="#"
-                                class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">Lire →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 6 -->
-                <article
-                    class="bg-white overflow-hidden border border-black/10 shadow-soft hover:-translate-y-1 transition group">
-                    <div class="relative h-48 w-full overflow-hidden">
-                        <img src="{{ asset('assets/ancien-combattant-2.jpg') }}"
-                            alt="Transparence"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
-                        <div
-                            class="absolute top-4 left-4 bg-rdcGold text-ink text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
-                            Transparence
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-xs font-mono text-black/50 mb-2">06 Oct 2025</p>
-                        <h3 class="font-extrabold text-lg leading-tight mb-3 group-hover:text-rdcBlue transition">
-                            Publication des procédures : délais & voies de recours
-                        </h3>
-                        <p class="text-sm text-black/70 line-clamp-3">
-                            Clarification des délais, pièces requises et canaux officiels de suivi.
-                        </p>
-
-                        <div class="mt-4 flex items-center justify-between">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-black/50">Guide</span>
-                            <a href="#"
-                                class="text-sm font-bold text-rdcBlue underline decoration-2 underline-offset-4">Lire →</a>
-                        </div>
-                    </div>
-                </article>
+                @endforeach
             </div>
 
             <!-- Bandeau d’archives -->
