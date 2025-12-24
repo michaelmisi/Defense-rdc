@@ -14,7 +14,7 @@
         <nav class="mt-6 px-2 space-y-1">
 
             <!-- Tableau de bord -->
-            <a href="#"
+            <a href="/admin"
                class="sidebar-link {{ $current === 'admin.dashboard' ? 'active' : '' }} flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-r hover:bg-white/5 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                      stroke-width="1.5" stroke="currentColor" class="w-5 h-5 opacity-70">
@@ -29,7 +29,7 @@
             </div>
 
             <!-- Actualités -->
-            <a href="#"
+            <a href="/admin/actualites"
                class="sidebar-link {{ str_contains($current, 'admin.posts') ? 'active' : '' }} flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-r hover:bg-white/5 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                      stroke-width="1.5" stroke="currentColor" class="w-5 h-5 opacity-70">
