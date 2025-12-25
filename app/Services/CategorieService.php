@@ -9,12 +9,12 @@ class CategorieService
 {
     public function getCategories()
     {
-        return Categorie::with('parent')->orderBy('parent_id')->orderBy('name')->paginate(10);
+        return Categorie::with('parent')->withCount('actualites')->orderBy('name')->paginate(10);
     }
 
     public function getAllCategories()
     {
-        return Categorie::all();
+        return Categorie::with('parent')->withCount('actualites')->orderBy('name')->get();
     }
 
     public function createCategorie(array $data): Categorie
