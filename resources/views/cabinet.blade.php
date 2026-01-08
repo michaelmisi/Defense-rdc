@@ -62,7 +62,7 @@
                     <p class="text-rdcBlue font-semibold text-lg mb-4">{{ $minister->official_function }}</p>
                     <div class="prose max-w-none text-black/80 leading-relaxed">
                         <p>
-                            {{ Illuminate\Support\Str::limit($minister->biography, 400) }}
+                            {{ Illuminate\Support\Str::of($minister->biography)->stripTags()->limit(400) }}
                             <a href="{{ route('cabinet.show', $minister) }}" class="text-rdcBlue hover:underline font-semibold">Lire la suite</a>
                         </p>
                     </div>

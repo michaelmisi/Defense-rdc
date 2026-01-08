@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             CategorieSeeder::class,
             ActualiteSeeder::class,
             ProjetSeeder::class,
+            CabinetMemberSeeder::class,
         ]);
     }
 }
